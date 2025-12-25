@@ -5,7 +5,7 @@ export default function TermsAndConditions() {
                 Terms and Conditions for Gelathi
             </h1>
             <p className="text-sm text-gray-400 text-center mb-10">
-                Last Updated: May 5, 2024
+                Last Updated: December 25, 2024
             </p>
 
             <p className="leading-relaxed text-gray-200 mb-8">
@@ -37,7 +37,9 @@ export default function TermsAndConditions() {
                 </ul>
                 <p className="leading-relaxed text-gray-200 mt-4">
                     By using the App, you represent and warrant that you meet all
-                    eligibility requirements.
+                    eligibility requirements. We enforce age verification through phone
+                    registration and date of birth confirmation. Female users undergo
+                    additional manual verification to confirm age.
                 </p>
             </section>
 
@@ -117,9 +119,87 @@ export default function TermsAndConditions() {
                 </p>
             </section>
 
-            {/* Section 4: Coins and Payments */}
+            {/* Section 4: Child Safety Standards */}
             <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">4. Coins and Payments</h2>
+                <h2 className="text-2xl font-semibold mb-4">
+                    4. Child Safety Standards
+                </h2>
+                <p className="leading-relaxed text-gray-200 mb-4">
+                    Gelathi has a{" "}
+                    <strong className="font-bold">zero-tolerance policy</strong> for Child
+                    Sexual Abuse and Exploitation (CSAE). Our platform is strictly for adults
+                    aged 18 and above, and we are committed to preventing any form of child
+                    exploitation.
+                </p>
+
+                <h3 className="text-xl font-semibold mt-4 mb-2">
+                    Prohibited Content &amp; Behavior:
+                </h3>
+                <p className="leading-relaxed text-gray-200 mb-4">
+                    The following are <strong className="font-bold">strictly prohibited</strong> and
+                    will result in immediate account termination and reporting to authorities:
+                </p>
+                <ul className="list-disc ml-6 space-y-2 text-gray-200">
+                    <li>
+                        Any Child Sexual Abuse Material (CSAM), including images, videos,
+                        or any visual depiction of minors in sexually explicit situations.
+                    </li>
+                    <li>
+                        Grooming, soliciting, or attempting to sexually exploit minors.
+                    </li>
+                    <li>
+                        Sharing, distributing, requesting, or possessing content that
+                        sexualizes children.
+                    </li>
+                    <li>
+                        Engaging in sextortion or trafficking of minors.
+                    </li>
+                    <li>
+                        Any communication or behavior intended to sexually exploit or
+                        endanger children.
+                    </li>
+                    <li>
+                        Misrepresenting your age if you are under 18.
+                    </li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mt-4 mb-2">
+                    Enforcement Actions:
+                </h3>
+                <ul className="list-disc ml-6 space-y-2 text-gray-200">
+                    <li>
+                        <strong className="font-bold">Immediate Account Termination:</strong> Any
+                        user found violating child safety standards will have their account
+                        permanently banned without prior warning.
+                    </li>
+                    <li>
+                        <strong className="font-bold">Reporting to Authorities:</strong> All
+                        instances of CSAM will be reported to the National Center for
+                        Missing &amp; Exploited Children (NCMEC) and relevant law enforcement
+                        agencies, including Indian authorities under the POCSO Act, 2012.
+                    </li>
+                    <li>
+                        <strong className="font-bold">Evidence Preservation:</strong> We will
+                        preserve all relevant user data and evidence for law enforcement
+                        investigation as required by law.
+                    </li>
+                </ul>
+
+                <h3 className="text-xl font-semibold mt-4 mb-2">
+                    User Reporting Obligation:
+                </h3>
+                <p className="leading-relaxed text-gray-200">
+                    If you encounter any content or behavior that may involve child
+                    exploitation, you are encouraged to report it immediately using our
+                    in-app reporting feature or by contacting{" "}
+                    <strong className="font-bold">childsafety@gelathi.com</strong>. All
+                    reports are reviewed within 24 hours by our moderation team.
+                </p>
+            </section>
+
+            {/* Section 5: Coins and Payments */}
+            <section className="mb-8">
+                <h2 className="text-2xl font-semibold mb-4">5. Coins and Payments</h2>
                 <p className="leading-relaxed text-gray-200 mb-4">
                     Gelathi uses a virtual currency system (&quot;Coins&quot;) for certain
                     features:
@@ -156,7 +236,7 @@ export default function TermsAndConditions() {
             {/* Section 5: Content and Intellectual Property */}
             <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-4">
-                    5. Content and Intellectual Property
+                    6. Content and Intellectual Property
                 </h2>
 
                 <h3 className="text-xl font-semibold mt-4 mb-2">Your Content:</h3>
@@ -187,7 +267,7 @@ export default function TermsAndConditions() {
 
             {/* Section 6: Privacy */}
             <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">6. Privacy</h2>
+                <h2 className="text-2xl font-semibold mb-4">7. Privacy</h2>
                 <p className="leading-relaxed text-gray-200">
                     Your privacy is important to us. Please review our{" "}
                     <a
@@ -203,7 +283,7 @@ export default function TermsAndConditions() {
 
             {/* Section 7: Disclaimers */}
             <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">7. Disclaimers</h2>
+                <h2 className="text-2xl font-semibold mb-4">8. Disclaimers</h2>
                 <ul className="list-disc ml-6 space-y-2 text-gray-200">
                     <li>
                         Gelathi is provided on an{" "}
@@ -233,7 +313,7 @@ export default function TermsAndConditions() {
             {/* Section 8: Limitation of Liability */}
             <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-4">
-                    8. Limitation of Liability
+                    9. Limitation of Liability
                 </h2>
                 <p className="leading-relaxed text-gray-200 mb-4">
                     To the maximum extent permitted by law:
@@ -257,7 +337,7 @@ export default function TermsAndConditions() {
 
             {/* Section 9: Indemnification */}
             <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">9. Indemnification</h2>
+                <h2 className="text-2xl font-semibold mb-4">10. Indemnification</h2>
                 <p className="leading-relaxed text-gray-200">
                     You agree to indemnify, defend, and hold harmless Mouni Mart,
                     its officers, directors, employees, and agents from any claims,
@@ -274,7 +354,7 @@ export default function TermsAndConditions() {
 
             {/* Section 10: Termination */}
             <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">10. Termination</h2>
+                <h2 className="text-2xl font-semibold mb-4">11. Termination</h2>
                 <ul className="list-disc ml-6 space-y-2 text-gray-200">
                     <li>
                         <strong className="font-bold">By You:</strong> You may delete your
@@ -295,7 +375,7 @@ export default function TermsAndConditions() {
 
             {/* Section 11: Changes to Terms */}
             <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">11. Changes to Terms</h2>
+                <h2 className="text-2xl font-semibold mb-4">12. Changes to Terms</h2>
                 <p className="leading-relaxed text-gray-200">
                     We may update these Terms from time to time. If we make material
                     changes, we will notify you through the App or via email. Your
@@ -307,7 +387,7 @@ export default function TermsAndConditions() {
             {/* Section 12: Governing Law and Disputes */}
             <section className="mb-8">
                 <h2 className="text-2xl font-semibold mb-4">
-                    12. Governing Law and Disputes
+                    13. Governing Law and Disputes
                 </h2>
                 <ul className="list-disc ml-6 space-y-2 text-gray-200">
                     <li>
@@ -330,7 +410,7 @@ export default function TermsAndConditions() {
 
             {/* Section 13: Contact Us */}
             <section className="mb-8">
-                <h2 className="text-2xl font-semibold mb-4">13. Contact Us</h2>
+                <h2 className="text-2xl font-semibold mb-4">14. Contact Us</h2>
                 <p className="leading-relaxed text-gray-200 mb-4">
                     If you have any questions or concerns about these Terms, please
                     contact us:

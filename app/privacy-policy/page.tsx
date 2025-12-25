@@ -5,7 +5,7 @@ export default function PrivacyPolicy() {
         Privacy Policy for Gelathi
       </h1>
       <p className="text-sm text-gray-400 text-center mb-10">
-        Last Updated: May 5, 2024
+        Last Updated: December 25, 2024
       </p>
 
       <p className="leading-relaxed text-gray-200 mb-8">
@@ -229,15 +229,135 @@ export default function PrivacyPolicy() {
         </ul>
       </section>
 
-      {/* Section 6: Children's Privacy */}
+      {/* Section 6: Child Safety & CSAE Standards */}
       <section className="mb-8">
         <h2 className="text-2xl font-semibold mb-4">
-          6. Children&apos;s Privacy
+          6. Child Safety &amp; CSAE Standards
         </h2>
+        <p className="leading-relaxed text-gray-200 mb-4">
+          Gelathi is committed to the safety of children and maintaining a platform
+          free from Child Sexual Abuse and Exploitation (CSAE). We have a{" "}
+          <strong className="font-bold">zero-tolerance policy</strong> for any
+          content or behavior that exploits, endangers, or sexualizes minors.
+        </p>
+
+        <h3 className="text-xl font-semibold mt-6 mb-2">
+          Adults-Only Platform (18+)
+        </h3>
+        <ul className="list-disc ml-6 space-y-2 text-gray-200">
+          <li>
+            Gelathi is <strong className="font-bold">strictly for adults aged 18 and above</strong>.
+            Minors are not permitted to create accounts or use the platform.
+          </li>
+          <li>
+            We enforce age verification through phone number registration and
+            date of birth confirmation during signup.
+          </li>
+          <li>
+            <strong className="font-bold">Female users undergo manual verification</strong> by
+            our moderation team to confirm they are over 18 years of age before
+            their accounts are activated.
+          </li>
+          <li>
+            If we discover any user is underage, we will{" "}
+            <strong className="font-bold">immediately terminate their account</strong> and
+            take appropriate action.
+          </li>
+        </ul>
+
+        <h3 className="text-xl font-semibold mt-6 mb-2">
+          Zero-Tolerance CSAE Policy
+        </h3>
+        <p className="leading-relaxed text-gray-200 mb-4">
+          The following are <strong className="font-bold">strictly prohibited</strong> on Gelathi:
+        </p>
+        <ul className="list-disc ml-6 space-y-2 text-gray-200">
+          <li>
+            Any content depicting, promoting, or glorifying child sexual abuse
+            or exploitation (CSAE).
+          </li>
+          <li>
+            Child Sexual Abuse Material (CSAM), including images, videos, or any
+            visual depiction of minors in sexually explicit situations.
+          </li>
+          <li>
+            Grooming, soliciting, or attempting to exploit minors in any way.
+          </li>
+          <li>
+            Sharing, distributing, or requesting content that sexualizes children.
+          </li>
+          <li>
+            Any behavior that endangers or puts children at risk of exploitation.
+          </li>
+        </ul>
+
+        <h3 className="text-xl font-semibold mt-6 mb-2">
+          CSAM Detection &amp; Reporting
+        </h3>
+        <ul className="list-disc ml-6 space-y-2 text-gray-200">
+          <li>
+            Upon discovery of any CSAM or CSAE content, we will{" "}
+            <strong className="font-bold">immediately remove the content</strong> and
+            permanently ban the offending user.
+          </li>
+          <li>
+            We report all instances of CSAM to the{" "}
+            <strong className="font-bold">
+              National Center for Missing &amp; Exploited Children (NCMEC)
+            </strong>{" "}
+            and cooperate fully with law enforcement agencies, including Indian
+            authorities under the POCSO Act, 2012.
+          </li>
+          <li>
+            We preserve evidence and user data as required by law for investigation
+            purposes.
+          </li>
+        </ul>
+
+        <h3 className="text-xl font-semibold mt-6 mb-2">
+          User Reporting Mechanism
+        </h3>
+        <ul className="list-disc ml-6 space-y-2 text-gray-200">
+          <li>
+            Gelathi provides an <strong className="font-bold">in-app reporting system</strong> that
+            allows users to report any suspicious activity, profiles, or content
+            that may involve child exploitation.
+          </li>
+          <li>
+            All reports are reviewed by our moderation team within 24 hours and
+            appropriate action is taken immediately.
+          </li>
+          <li>
+            Users can also report concerns via our dedicated child safety email
+            at <strong className="font-bold">childsafety@gelathi.com</strong>.
+          </li>
+        </ul>
+
+        <h3 className="text-xl font-semibold mt-6 mb-2">
+          Child Safety Point of Contact
+        </h3>
+        <p className="leading-relaxed text-gray-200 mb-4">
+          For any child safety concerns or to report CSAE-related issues, please
+          contact our dedicated Child Safety Team:
+        </p>
+        <ul className="list-none space-y-2 text-gray-200">
+          <li>
+            <strong>Email:</strong> childsafety@gelathi.com
+          </li>
+          <li>
+            <strong>Response Time:</strong> Within 24 hours
+          </li>
+        </ul>
+
+        <h3 className="text-xl font-semibold mt-6 mb-2">
+          Cooperation with Authorities
+        </h3>
         <p className="leading-relaxed text-gray-200">
-          Gelathi is strictly for adults (18+ only). We do not knowingly
-          collect any information from children. If we discover a user is
-          underage, we will immediately delete their account.
+          Gelathi fully cooperates with law enforcement agencies and government
+          authorities in investigating any reports of child exploitation. We comply
+          with all applicable Indian laws, including the Information Technology Act,
+          2000 and the Protection of Children from Sexual Offences (POCSO) Act, 2012,
+          as well as international child safety standards.
         </p>
       </section>
 
