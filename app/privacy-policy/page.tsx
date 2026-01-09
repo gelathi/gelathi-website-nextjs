@@ -370,11 +370,11 @@ export default function PrivacyPolicy() {
         </p>
         <ul className="list-none space-y-2 text-gray-200">
           <li>
-            <strong>Email:</strong> privacy@gelathi.com
+            <strong>Email:</strong> kavyagowdakb@gmail.com
           </li>
           <li>
-            <strong>Address:</strong> Gelathi Pvt. Ltd., 123 Tech Park,
-            Bengaluru, Karnataka 560001, India
+            <strong>Address:</strong> Khata-192, Kurugal, Vemagal Hobli, Kolar 563102,
+                        Karnataka 560001, India
           </li>
         </ul>
       </section>
