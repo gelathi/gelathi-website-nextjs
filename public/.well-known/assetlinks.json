@@ -1,0 +1,12 @@
+[
+  {
+    "relation": ["delegate_permission/common.handle_all_urls"],
+    "target": {
+      "namespace": "android_app",
+      "package_name": "com.neulett.gelathi",
+      "sha256_cert_fingerprints": [
+        "F4:4B:35:AB:C4:05:AE:12:B1:74:ED:2B:4A:C6:13:CB:67:4F:49:43:AB:6E:B3:E2:9D:A7:37:01:F5:94:C7:3E"
+      ]
+    }
+  }
+]

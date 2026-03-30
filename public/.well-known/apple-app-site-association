@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "6757395937.com.neulett.gelathi",
+        "paths": ["/referral", "/referral/*"]
+      }
+    ]
+  }
+}
