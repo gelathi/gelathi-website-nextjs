@@ -2,9 +2,8 @@ import type { NextConfig } from "next";
 
 /**
  * Serves Digital Asset Links + Universal Links metadata from `public/.well-known/*`.
- *   10-character Apple Developer Team ID (Membership page), before production.
- * - Apex and www (`gelathi.in`, `www.gelathi.in`) must both resolve to this deployment so
- *   the same files are reachable on both hosts.
+ * Universal Link path patterns live in `apple-app-site-association` (referral + shared content).
+ * Apex and www (`gelathi.in`, `www.gelathi.in`) must both resolve to this deployment.
  */
 const nextConfig: NextConfig = {
   async headers() {

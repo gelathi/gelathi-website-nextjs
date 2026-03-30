@@ -4,7 +4,13 @@
     "details": [
       {
         "appID": "6757395937.com.neulett.gelathi",
-        "paths": ["/referral", "/referral/*"]
+        "paths": [
+          "/referral",
+          "/referral/*",
+          "/content/post/*",
+          "/content/user/*",
+          "/content/marketplace/item/*"
+        ]
       }
     ]
   }
