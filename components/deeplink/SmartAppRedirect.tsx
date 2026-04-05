@@ -41,20 +41,30 @@ function IosStoreRedirect({
   shareKind: ShareKind;
 }) {
   useEffect(() => {
-    void (async () => {
-      try {
-        await navigator.clipboard.writeText(payload);
-        logger.info("deeplink_payload_copied", { shareKind });
-      } catch (err) {
+    // Copy payload to clipboard so the app can read it after a fresh install (deferred deep link).
+    navigator.clipboard.writeText(payload).then(
+      () => logger.info("deeplink_payload_copied", { shareKind }),
+      (err) =>
         logger.warn("clipboard_write_failed", {
           shareKind,
           message: err instanceof Error ? err.message : String(err),
-        });
-      }
+        }),
+    );
+
+    // Attempt to open the installed app via custom URL scheme.
+    logger.info("deeplink_attempt_ios_scheme", { shareKind });
+    window.location.href = `gelathi://?${payload}`;
+
+    // If the app opened, the page becomes hidden (backgrounded by iOS).
+    // Only redirect to the App Store if the page is still visible after the delay.
+    const timer = setTimeout(() => {
+      if (document.hidden) return;
       const target = getIosAppStoreUrl();
       logger.info("deeplink_redirect_ios", { shareKind, target });
       window.location.href = target;
-    })();
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, [payload, shareKind]);
 
   return <RedirectShell />;

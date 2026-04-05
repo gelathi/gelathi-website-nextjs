@@ -1,18 +1,14 @@
 import { SmartAppRedirect } from "@/components/deeplink/SmartAppRedirect";
 
-/**
- * `/referral` — optional `?ref=` passes through to the app via clipboard / Play referrer.
- */
 export default async function ReferralPage({
   searchParams,
 }: {
-  searchParams: Promise<{ ref?: string }>;
+  searchParams: Promise<{ invite_code?: string }>;
 }) {
-  const { ref } = await searchParams;
-  const payload =
-    ref !== undefined && ref !== ""
-      ? `ref=${encodeURIComponent(ref)}`
-      : "type=referral";
+  const { invite_code } = await searchParams;
+  const params: Record<string, string> = { type: "referral" };
+  if (invite_code) params.invite_code = invite_code;
+  const payload = new URLSearchParams(params).toString();
 
   return <SmartAppRedirect payload={payload} shareKind="referral" />;
 }

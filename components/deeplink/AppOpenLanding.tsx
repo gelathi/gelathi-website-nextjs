@@ -11,11 +11,6 @@ function copyForKind(kind: ShareKind): { headline: string; body: string } {
         headline: "You’re invited to Gelathi",
         body: "This link brings referral details into the app. Download Gelathi on your phone to continue.",
       };
-    case "referral_code":
-      return {
-        headline: "Join Gelathi with this referral",
-        body: "Open the app on your phone to use this code and get started.",
-      };
     case "post":
       return {
         headline: "Check out this post on Gelathi",
