@@ -78,9 +78,20 @@ function AndroidStoreRedirect({
   shareKind: ShareKind;
 }) {
   useEffect(() => {
-    const target = `${PLAY_STORE_DETAILS_URL}&referrer=${encodeURIComponent(payload)}`;
-    logger.info("deeplink_redirect_android", { shareKind });
-    window.location.href = target;
+    // Attempt to open the installed app via custom URL scheme.
+    logger.info("deeplink_attempt_android_scheme", { shareKind });
+    window.location.href = `gelathi://?${payload}`;
+
+    // If the app isn't installed the scheme silently fails; fall back to the Play Store.
+    // The referrer param carries the payload for deferred deep linking after a fresh install.
+    const timer = setTimeout(() => {
+      if (document.hidden) return;
+      const target = `${PLAY_STORE_DETAILS_URL}&referrer=${encodeURIComponent(payload)}`;
+      logger.info("deeplink_redirect_android", { shareKind });
+      window.location.href = target;
+    }, 2000);
+
+    return () => clearTimeout(timer);
   }, [payload, shareKind]);
 
   return <RedirectShell />;
