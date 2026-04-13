@@ -1,11 +1,15 @@
 [
   {
-    "relation": ["delegate_permission/common.handle_all_urls"],
+    "relation": [
+      "delegate_permission/common.handle_all_urls",
+      "delegate_permission/common.get_login_creds"
+    ],
     "target": {
       "namespace": "android_app",
       "package_name": "com.neulett.gelathi",
       "sha256_cert_fingerprints": [
-        "F4:4B:35:AB:C4:05:AE:12:B1:74:ED:2B:4A:C6:13:CB:67:4F:49:43:AB:6E:B3:E2:9D:A7:37:01:F5:94:C7:3E"
+        "F4:4B:35:AB:C4:05:AE:12:B1:74:ED:2B:4A:C6:13:CB:67:4F:49:43:AB:6E:B3:E2:9D:A7:37:01:F5:94:C7:3E",
+        "A9:A3:40:7D:03:AB:19:C7:96:E4:F5:D0:F5:4E:F8:F2:F7:AA:4A:9A:8A:DF:FE:8E:6A:C2:88:97:F4:18:6B:95"
       ]
     }
   }
