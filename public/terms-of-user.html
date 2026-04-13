@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Use — Gelathi</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #1a1a2e;
+  --ink-soft: #3d3d5c;
+  --ink-muted: #7a7a99;
+  --accent: #c8553d;
+  --accent-light: #f5ede9;
+  --bg: #faf9f6;
+  --bg-warm: #f3f1ec;
+  --border: #e0ddd6;
+  --white: #ffffff;
+  --section-gap: 2.5rem;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.doc-header {
+  background: var(--ink);
+  color: var(--white);
+  padding: 3rem 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.doc-header::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.12;
+}
+.doc-header .inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+.doc-header .brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.doc-header .brand::before {
+  content: '';
+  display: inline-block;
+  width: 28px; height: 2px;
+  background: var(--accent);
+}
+.doc-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.doc-header .meta {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
+/* ── Nav bar ── */
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  color: var(--ink-muted);
+  text-decoration: none;
+  padding: 0.9rem 1rem;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+/* ── Main layout ── */
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+/* ── Effective date notice ── */
+.effective-notice {
+  background: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  padding: 0.9rem 1.2rem;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 2.5rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.effective-notice strong { color: var(--accent); }
+
+/* ── Sections ── */
+.policy-section {
+  margin-bottom: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  border-bottom: 1px solid var(--border);
+  animation: fadeUp 0.4s ease both;
+}
+.policy-section:last-child { border-bottom: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.policy-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.policy-section h2 .num {
+  font-size: 0.7rem;
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 0.2em 0.55em;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.policy-section h3 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 1.4rem 0 0.5rem;
+}
+
+.policy-section p {
+  color: var(--ink-soft);
+  margin-bottom: 0.9rem;
+}
+.policy-section p:last-child { margin-bottom: 0; }
+
+.policy-section ul, .policy-section ol {
+  margin: 0.5rem 0 0.9rem 1.4rem;
+  color: var(--ink-soft);
+}
+.policy-section li { margin-bottom: 0.35rem; }
+
+/* ── Highlight box ── */
+.highlight-box {
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  margin: 1rem 0;
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+}
+.highlight-box strong { color: var(--ink); }
+
+/* ── Contact block ── */
+.contact-block {
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 1.8rem 2rem;
+  margin-top: 2rem;
+}
+.contact-block h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.7rem;
+}
+.contact-block p { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 0.3rem; }
+.contact-block a { color: var(--accent); text-decoration: none; }
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border);
+}
+footer a { color: var(--ink-muted); }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  main { padding: 2rem 1.2rem 4rem; }
+  .doc-header .inner { padding: 0 1.2rem; }
+}
+
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1a2e;--ink-soft:#3d3d5c;--ink-muted:#7a7a99;--accent:#c8553d;--accent-light:#f5ede9;--bg:#faf9f6;--bg-warm:#f3f1ec;--border:#e0ddd6;--white:#ffffff;--section-gap:2.5rem}
+html{scroll-behavior:smooth}
+body{font-family:"Source Serif 4",Georgia,serif;font-weight:400;font-size:1.0625rem;line-height:1.8;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+.doc-header{background:var(--ink);color:var(--white);padding:3rem 0 2.5rem;position:relative;overflow:hidden}
+.doc-header::before{content:"";position:absolute;top:-60px;right:-60px;width:320px;height:320px;border-radius:50%;background:var(--accent);opacity:0.12}
+.doc-header .inner{max-width:780px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.doc-header .brand{font-family:"Playfair Display",serif;font-size:0.8rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
+.doc-header .brand::before{content:"";display:inline-block;width:28px;height:2px;background:var(--accent)}
+.doc-header h1{font-family:"Playfair Display",serif;font-size:clamp(2rem,5vw,2.75rem);font-weight:700;line-height:1.2;color:var(--white);margin-bottom:1rem}
+.doc-header .meta{font-size:0.875rem;color:rgba(255,255,255,0.5);font-style:italic}
+main{max-width:780px;margin:0 auto;padding:3rem 2rem 5rem}
+.effective-notice{background:var(--accent-light);border-left:3px solid var(--accent);padding:0.9rem 1.2rem;border-radius:0 6px 6px 0;margin-bottom:2.5rem;font-size:0.9rem;color:var(--ink-soft)}
+.effective-notice strong{color:var(--accent)}
+.policy-section{margin-bottom:var(--section-gap);padding-bottom:var(--section-gap);border-bottom:1px solid var(--border);animation:fadeUp 0.4s ease both}
+.policy-section:last-child{border-bottom:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.policy-section h2{font-family:"Playfair Display",serif;font-size:1.35rem;font-weight:700;color:var(--ink);margin-bottom:1rem;display:flex;align-items:baseline;gap:0.6rem}
+.policy-section h2 .num{font-size:0.7rem;font-family:"Source Serif 4",serif;font-weight:600;letter-spacing:0.1em;color:var(--accent);background:var(--accent-light);padding:0.2em 0.55em;border-radius:3px;flex-shrink:0}
+.policy-section h3{font-family:"Source Serif 4",serif;font-size:1rem;font-weight:600;color:var(--ink);margin:1.4rem 0 0.5rem}
+.policy-section p{color:var(--ink-soft);margin-bottom:0.9rem}
+.policy-section p:last-child{margin-bottom:0}
+.policy-section ul,.policy-section ol{margin:0.5rem 0 0.9rem 1.4rem;color:var(--ink-soft)}
+.policy-section li{margin-bottom:0.35rem}
+.highlight-box{background:var(--bg-warm);border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.4rem;margin:1rem 0;font-size:0.94rem;color:var(--ink-soft)}
+.highlight-box strong{color:var(--ink)}
+.contact-block{background:var(--ink);color:var(--white);border-radius:10px;padding:1.8rem 2rem;margin-top:2rem}
+.contact-block h3{font-family:"Playfair Display",serif;font-size:1.1rem;color:var(--white);margin-bottom:0.7rem}
+.contact-block p{color:rgba(255,255,255,0.65);font-size:0.9rem;margin-bottom:0.3rem}
+.contact-block a{color:var(--accent);text-decoration:none}
+footer{text-align:center;padding:2rem;font-size:0.8rem;color:var(--ink-muted);border-top:1px solid var(--border)}
+footer a{color:var(--ink-muted)}
+</style>
+</head>
+<body>
+
+<header class="doc-header">
+  <div class="inner">
+    <div class="brand">Gelathi</div>
+    <h1>Terms of Use</h1>
+    <p class="meta">Governing your access to and use of the Gelathi platform</p>
+  </div>
+</header>
+
+
+<main>
+  <div class="effective-notice">
+    <strong>Effective Date:</strong> April 13, 2026 &nbsp;·&nbsp; <strong>Last Updated:</strong> April 13, 2026
+  </div>
+
+  <div class="policy-section" id="acceptance">
+    <h2><span class="num">01</span> Acceptance of Terms</h2>
+    <p>Welcome to Gelathi. By downloading, installing, accessing, or using the Gelathi mobile application or any associated services (collectively, the "Platform"), you agree to be legally bound by these Terms of Use ("Terms"), our Privacy Policy, Community Guidelines, and any other policies referenced herein.</p>
+    <p>If you do not agree to these Terms in their entirety, you must immediately cease all use of the Platform. These Terms constitute a legally binding agreement between you and Gelathi ("Company," "we," "us," or "our"), a company incorporated and operating under the laws of India.</p>
+    <div class="highlight-box">
+      <strong>Please read carefully.</strong> These Terms contain provisions that limit our liability, require arbitration of disputes, and describe your rights and obligations regarding content, coins, calls, and marketplace transactions.
+    </div>
+  </div>
+
+  <div class="policy-section" id="eligibility">
+    <h2><span class="num">02</span> Eligibility</h2>
+    <p>You must be at least <strong>18 years of age</strong> to register for or use the Platform. By creating an account, you represent and warrant that:</p>
+    <ul>
+      <li>You are at least 18 years old;</li>
+      <li>You have the legal capacity to enter into a binding contract under applicable Indian law;</li>
+      <li>You are not barred from using the Platform under any applicable law;</li>
+      <li>You will use the Platform only for lawful purposes and in accordance with these Terms.</li>
+    </ul>
+    <p>We reserve the right to request proof of age at any time and to suspend or terminate accounts where eligibility cannot be confirmed.</p>
+  </div>
+
+  <div class="policy-section" id="accounts">
+    <h2><span class="num">03</span> Account Registration &amp; Security</h2>
+    <p>To access most features of the Platform, you must register for an account. You agree to:</p>
+    <ul>
+      <li>Provide accurate, current, and complete information during registration;</li>
+      <li>Maintain and promptly update your account information;</li>
+      <li>Keep your login credentials confidential and not share them with any third party;</li>
+      <li>Notify us immediately of any unauthorized access to or use of your account;</li>
+      <li>Be solely responsible for all activity that occurs under your account.</li>
+    </ul>
+    <p>Each user may register only one account. Creating multiple accounts to circumvent bans, restrictions, or promotional limits is strictly prohibited.</p>
+  </div>
+
+  <div class="policy-section" id="services">
+    <h2><span class="num">04</span> Platform Services</h2>
+    <p>Gelathi provides a social and listener-engagement platform that includes, but is not limited to, the following features:</p>
+    <ul>
+      <li><strong>Messaging:</strong> Text-based chat between registered users;</li>
+      <li><strong>Voice &amp; Video Calls:</strong> Real-time audio and video communication;</li>
+      <li><strong>Media Sharing:</strong> Sharing of images and videos between users;</li>
+      <li><strong>User Discovery:</strong> Search and browse other registered users;</li>
+      <li><strong>Listener Programme:</strong> Verified female users may register as Listeners and earn through audio and video calls;</li>
+      <li><strong>Marketplace:</strong> Purchase, track, review, and gift physical or digital products to other users;</li>
+      <li><strong>Coin System:</strong> A virtual currency system used to access paid features.</li>
+    </ul>
+    <p>We reserve the right to modify, suspend, or discontinue any feature or the Platform as a whole at any time, with or without notice.</p>
+  </div>
+
+  <div class="policy-section" id="coins">
+    <h2><span class="num">05</span> Coin System &amp; Payments</h2>
+    <h3>5.1 Virtual Currency</h3>
+    <p>Gelathi Coins ("Coins") are a virtual currency used exclusively within the Platform to access paid features such as voice calls, video calls, and certain premium interactions. Coins have no monetary value outside the Platform and cannot be exchanged for cash, transferred to other users (except as part of designated in-app gifting features), or redeemed for real-world goods.</p>
+    <h3>5.2 Purchase of Coins</h3>
+    <p>Coins may be purchased through the Platform via supported payment gateways in compliance with applicable Indian payment regulations, including guidelines issued by the Reserve Bank of India. All purchases are final unless otherwise required by law.</p>
+    <h3>5.3 Coin Expiry &amp; Account Closure</h3>
+    <p>Unused Coins may expire after a period of inactivity as notified within the Platform. Upon termination or deletion of your account, any remaining Coin balance will be forfeited with no refund, except where mandated by applicable law.</p>
+    <h3>5.4 No Guarantee of Service</h3>
+    <p>The availability of features that require Coins is subject to the other party's availability, network conditions, and Platform uptime. We do not guarantee that a call or interaction will be completed once Coins are deducted.</p>
+  </div>
+
+  <div class="policy-section" id="listeners">
+    <h2><span class="num">06</span> Listener Programme</h2>
+    <h3>6.1 Registration</h3>
+    <p>Female users may apply to become a Verified Listener by completing the verification process, which may include identity verification, photo verification, and agreement to additional Listener-specific terms. Approval is at our sole discretion.</p>
+    <h3>6.2 Earnings</h3>
+    <p>Verified Listeners earn a portion of the Coins spent by callers during audio and video calls, converted to real monetary value per our current payout schedule. Earnings are subject to applicable tax deductions at source (TDS) as required under Indian income tax law. Gelathi will issue the relevant tax documents (e.g., Form 26AS credits) as required.</p>
+    <h3>6.3 Listener Obligations</h3>
+    <p>Listeners must maintain professional conduct, comply with Community Guidelines, and must not solicit off-platform payments, personal meetings, or any transaction outside the Platform.</p>
+    <h3>6.4 Suspension &amp; Removal</h3>
+    <p>Listener status may be revoked at any time for violation of these Terms, Community Guidelines, or any conduct deemed harmful to users or the Platform's reputation.</p>
+  </div>
+
+  <div class="policy-section" id="conduct">
+    <h2><span class="num">07</span> Prohibited Conduct</h2>
+    <p>You agree not to engage in any of the following:</p>
+    <ul>
+      <li>Harassing, threatening, abusing, or intimidating any other user;</li>
+      <li>Uploading or sharing obscene, pornographic, or sexually explicit content;</li>
+      <li>Impersonating any person or entity, or misrepresenting your affiliation;</li>
+      <li>Soliciting personal information from minors or attempting to contact users you know to be under 18;</li>
+      <li>Attempting to bypass, hack, or exploit any security feature of the Platform;</li>
+      <li>Using automated tools, bots, or scripts to interact with the Platform;</li>
+      <li>Engaging in any fraudulent activity including fake reviews, coin manipulation, or false Marketplace listings;</li>
+      <li>Violating any applicable law, including the Information Technology Act, 2000 and rules thereunder, Indian Penal Code provisions, or POCSO Act;</li>
+      <li>Distributing malware, viruses, or any harmful code.</li>
+    </ul>
+    <p>Violations may result in immediate account suspension or termination and may be reported to appropriate law enforcement authorities.</p>
+  </div>
+
+  <div class="policy-section" id="content">
+    <h2><span class="num">08</span> User-Generated Content</h2>
+    <p>You retain ownership of content you post, upload, or share on the Platform. By submitting content, you grant Gelathi a non-exclusive, worldwide, royalty-free, sublicensable licence to use, reproduce, adapt, publish, and distribute such content solely for the purpose of operating and improving the Platform.</p>
+    <p>You represent and warrant that your content does not infringe any third-party intellectual property rights, does not violate any applicable law, and is not defamatory, obscene, or harmful.</p>
+    <p>We reserve the right, but not the obligation, to review, moderate, or remove any content at our discretion.</p>
+  </div>
+
+  <div class="policy-section" id="marketplace">
+    <h2><span class="num">09</span> Marketplace</h2>
+    <p>The Marketplace allows users to browse and purchase products listed on the Platform. By placing an order, you agree to our Return &amp; Refund Policy and the specific terms of the product listing.</p>
+    <ul>
+      <li>Orders may be placed for yourself or gifted to another registered user;</li>
+      <li>Delivery timelines and logistics are managed by third-party partners;</li>
+      <li>All marketplace transactions are subject to GST and other applicable Indian taxes;</li>
+      <li>Gelathi acts as a platform facilitator and is not directly liable for product quality, unless we are the direct seller;</li>
+      <li>Users may post reviews following receipt of orders, subject to Community Guidelines.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section" id="intellectual">
+    <h2><span class="num">10</span> Intellectual Property</h2>
+    <p>All intellectual property rights in and to the Platform, including its design, software, trademarks, logos, and content created by Gelathi, are owned by or licensed to the Company. Nothing in these Terms grants you any right, title, or interest in our intellectual property.</p>
+    <p>You may not reproduce, distribute, modify, create derivative works of, publicly display, or otherwise exploit any of our intellectual property without our prior written consent.</p>
+  </div>
+
+  <div class="policy-section" id="liability">
+    <h2><span class="num">11</span> Limitation of Liability</h2>
+    <p>To the maximum extent permitted by applicable law, Gelathi and its officers, directors, employees, and agents shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including but not limited to loss of profits, data, goodwill, or other intangible losses arising from:</p>
+    <ul>
+      <li>Your use of or inability to use the Platform;</li>
+      <li>Any unauthorized access to or alteration of your transmissions or data;</li>
+      <li>Conduct of any third-party user on the Platform;</li>
+      <li>Any other matter related to the Platform.</li>
+    </ul>
+    <p>Our total aggregate liability shall not exceed the amount you paid to us in the three (3) months preceding the event giving rise to the claim.</p>
+  </div>
+
+  <div class="policy-section" id="termination">
+    <h2><span class="num">12</span> Termination</h2>
+    <p>We may suspend or terminate your account and access to the Platform at any time, with or without cause, and with or without notice. You may delete your account at any time through the Platform settings.</p>
+    <p>Upon termination, all licences granted to you will immediately cease, and you must discontinue all use of the Platform. Sections that by their nature should survive termination (including Sections 8, 10, 11, and 13) shall survive.</p>
+  </div>
+
+  <div class="policy-section" id="governing">
+    <h2><span class="num">13</span> Governing Law &amp; Dispute Resolution</h2>
+    <p>These Terms are governed by and construed in accordance with the laws of India, without regard to conflict of law principles. Any dispute arising out of or in connection with these Terms shall first be subject to good-faith negotiation.</p>
+    <p>If unresolved within 30 days, disputes shall be referred to arbitration conducted in accordance with the Arbitration and Conciliation Act, 1996, by a sole arbitrator mutually appointed by the parties. The seat of arbitration shall be Bengaluru, Karnataka, India. All proceedings shall be in English.</p>
+    <p>Nothing herein prevents either party from seeking urgent injunctive or equitable relief from a court of competent jurisdiction.</p>
+  </div>
+
+  <div class="policy-section" id="contact">
+    <h2><span class="num">14</span> Contact Us</h2>
+    <p>For questions, complaints, or concerns regarding these Terms, please reach out to our grievance officer as required under the Information Technology (Intermediary Guidelines and Digital Media Ethics Code) Rules, 2021:</p>
+    <div class="contact-block">
+      <h3>Grievance Officer — Gelathi</h3>
+      <p>Email: <a href="mailto:legal@gelathi.in">legal@gelathi.in</a></p>
+      <p>Response time: Within 24 hours of receipt; resolution within 15 days as mandated by law.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 Gelathi. All rights reserved. &nbsp;·&nbsp;
+  <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+  <a href="return-refund-policy.html">Return Policy</a> &nbsp;·&nbsp;
+  <a href="community-guidelines.html">Community Guidelines</a> &nbsp;·&nbsp;
+  <a href="cookie-policy.html">Cookie Policy</a>
+</footer>
+
+</body>
+</html>

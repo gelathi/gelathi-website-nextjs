@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Community Guidelines — Gelathi</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #1a1a2e;
+  --ink-soft: #3d3d5c;
+  --ink-muted: #7a7a99;
+  --accent: #c8553d;
+  --accent-light: #f5ede9;
+  --bg: #faf9f6;
+  --bg-warm: #f3f1ec;
+  --border: #e0ddd6;
+  --white: #ffffff;
+  --section-gap: 2.5rem;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.doc-header {
+  background: var(--ink);
+  color: var(--white);
+  padding: 3rem 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.doc-header::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.12;
+}
+.doc-header .inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+.doc-header .brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.doc-header .brand::before {
+  content: '';
+  display: inline-block;
+  width: 28px; height: 2px;
+  background: var(--accent);
+}
+.doc-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.doc-header .meta {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
+/* ── Nav bar ── */
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  color: var(--ink-muted);
+  text-decoration: none;
+  padding: 0.9rem 1rem;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+/* ── Main layout ── */
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+/* ── Effective date notice ── */
+.effective-notice {
+  background: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  padding: 0.9rem 1.2rem;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 2.5rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.effective-notice strong { color: var(--accent); }
+
+/* ── Sections ── */
+.policy-section {
+  margin-bottom: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  border-bottom: 1px solid var(--border);
+  animation: fadeUp 0.4s ease both;
+}
+.policy-section:last-child { border-bottom: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.policy-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.policy-section h2 .num {
+  font-size: 0.7rem;
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 0.2em 0.55em;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.policy-section h3 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 1.4rem 0 0.5rem;
+}
+
+.policy-section p {
+  color: var(--ink-soft);
+  margin-bottom: 0.9rem;
+}
+.policy-section p:last-child { margin-bottom: 0; }
+
+.policy-section ul, .policy-section ol {
+  margin: 0.5rem 0 0.9rem 1.4rem;
+  color: var(--ink-soft);
+}
+.policy-section li { margin-bottom: 0.35rem; }
+
+/* ── Highlight box ── */
+.highlight-box {
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  margin: 1rem 0;
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+}
+.highlight-box strong { color: var(--ink); }
+
+/* ── Contact block ── */
+.contact-block {
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 1.8rem 2rem;
+  margin-top: 2rem;
+}
+.contact-block h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.7rem;
+}
+.contact-block p { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 0.3rem; }
+.contact-block a { color: var(--accent); text-decoration: none; }
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border);
+}
+footer a { color: var(--ink-muted); }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  main { padding: 2rem 1.2rem 4rem; }
+  .doc-header .inner { padding: 0 1.2rem; }
+}
+
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1a2e;--ink-soft:#3d3d5c;--ink-muted:#7a7a99;--accent:#c8553d;--accent-light:#f5ede9;--bg:#faf9f6;--bg-warm:#f3f1ec;--border:#e0ddd6;--white:#ffffff;--section-gap:2.5rem}
+html{scroll-behavior:smooth}
+body{font-family:"Source Serif 4",Georgia,serif;font-weight:400;font-size:1.0625rem;line-height:1.8;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+.doc-header{background:var(--ink);color:var(--white);padding:3rem 0 2.5rem;position:relative;overflow:hidden}
+.doc-header::before{content:"";position:absolute;top:-60px;right:-60px;width:320px;height:320px;border-radius:50%;background:var(--accent);opacity:0.12}
+.doc-header .inner{max-width:780px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.doc-header .brand{font-family:"Playfair Display",serif;font-size:0.8rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
+.doc-header .brand::before{content:"";display:inline-block;width:28px;height:2px;background:var(--accent)}
+.doc-header h1{font-family:"Playfair Display",serif;font-size:clamp(2rem,5vw,2.75rem);font-weight:700;line-height:1.2;color:var(--white);margin-bottom:1rem}
+.doc-header .meta{font-size:0.875rem;color:rgba(255,255,255,0.5);font-style:italic}
+main{max-width:780px;margin:0 auto;padding:3rem 2rem 5rem}
+.effective-notice{background:var(--accent-light);border-left:3px solid var(--accent);padding:0.9rem 1.2rem;border-radius:0 6px 6px 0;margin-bottom:2.5rem;font-size:0.9rem;color:var(--ink-soft)}
+.effective-notice strong{color:var(--accent)}
+.policy-section{margin-bottom:var(--section-gap);padding-bottom:var(--section-gap);border-bottom:1px solid var(--border);animation:fadeUp 0.4s ease both}
+.policy-section:last-child{border-bottom:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.policy-section h2{font-family:"Playfair Display",serif;font-size:1.35rem;font-weight:700;color:var(--ink);margin-bottom:1rem;display:flex;align-items:baseline;gap:0.6rem}
+.policy-section h2 .num{font-size:0.7rem;font-family:"Source Serif 4",serif;font-weight:600;letter-spacing:0.1em;color:var(--accent);background:var(--accent-light);padding:0.2em 0.55em;border-radius:3px;flex-shrink:0}
+.policy-section h3{font-family:"Source Serif 4",serif;font-size:1rem;font-weight:600;color:var(--ink);margin:1.4rem 0 0.5rem}
+.policy-section p{color:var(--ink-soft);margin-bottom:0.9rem}
+.policy-section p:last-child{margin-bottom:0}
+.policy-section ul,.policy-section ol{margin:0.5rem 0 0.9rem 1.4rem;color:var(--ink-soft)}
+.policy-section li{margin-bottom:0.35rem}
+.highlight-box{background:var(--bg-warm);border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.4rem;margin:1rem 0;font-size:0.94rem;color:var(--ink-soft)}
+.highlight-box strong{color:var(--ink)}
+.contact-block{background:var(--ink);color:var(--white);border-radius:10px;padding:1.8rem 2rem;margin-top:2rem}
+.contact-block h3{font-family:"Playfair Display",serif;font-size:1.1rem;color:var(--white);margin-bottom:0.7rem}
+.contact-block p{color:rgba(255,255,255,0.65);font-size:0.9rem;margin-bottom:0.3rem}
+.contact-block a{color:var(--accent);text-decoration:none}
+footer{text-align:center;padding:2rem;font-size:0.8rem;color:var(--ink-muted);border-top:1px solid var(--border)}
+footer a{color:var(--ink-muted)}
+</style>
+</head>
+<body>
+
+<header class="doc-header">
+  <div class="inner">
+    <div class="brand">Gelathi</div>
+    <h1>Community Guidelines</h1>
+    <p class="meta">The standards that keep Gelathi safe, respectful, and enjoyable for everyone</p>
+  </div>
+</header>
+
+
+<main>
+  <div class="effective-notice">
+    <strong>Effective Date:</strong> April 13, 2026 &nbsp;·&nbsp; <strong>Last Updated:</strong> April 13, 2026
+  </div>
+
+  <div class="policy-section" id="philosophy">
+    <h2><span class="num">01</span> Our Philosophy</h2>
+    <p>Gelathi is built around genuine human connection — listening, understanding, and engaging with others in a space that feels safe and welcoming. These Community Guidelines exist to protect that experience for every person on our Platform.</p>
+    <p>We expect all users — including Listeners, marketplace buyers and sellers, and everyone in between — to treat one another with dignity and respect. Violating these guidelines may result in content removal, account suspension, or permanent termination, and in serious cases, referral to law enforcement.</p>
+    <div class="highlight-box">
+      These guidelines apply to all forms of interaction on Gelathi: text messages, calls, media shared, profile content, marketplace listings, reviews, and any other user-generated content.
+    </div>
+  </div>
+
+  <div class="policy-section" id="safety">
+    <h2><span class="num">02</span> Safety &amp; Harm Prevention</h2>
+    <p>The safety of our community is non-negotiable. The following are strictly prohibited:</p>
+    <ul>
+      <li><strong>Threats &amp; Violence:</strong> Threatening, inciting, or glorifying violence against any person or group;</li>
+      <li><strong>Self-Harm:</strong> Content that promotes, encourages, or provides instructions for self-harm or suicide. If you or someone you know is in crisis, please contact iCall at <strong>9152987821</strong> or Vandrevala Foundation at <strong>1860-2662-345</strong>;</li>
+      <li><strong>Exploitation:</strong> Any exploitation of or predatory behaviour toward other users, particularly involving financial manipulation;</li>
+      <li><strong>Minors:</strong> Any content involving, sexualising, grooming, or soliciting minors in any manner. This is a zero-tolerance policy and will be reported to the Cyber Crime Division and under the POCSO Act, 2012;</li>
+      <li><strong>Stalking &amp; Doxxing:</strong> Tracking, surveilling, or publishing private personal information of another user without consent;</li>
+      <li><strong>Non-Consensual Content:</strong> Sharing intimate images or recordings of another person without their explicit consent.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section" id="respectful">
+    <h2><span class="num">03</span> Respectful Interaction</h2>
+    <p>Gelathi is a diverse platform. We do not tolerate:</p>
+    <ul>
+      <li><strong>Harassment:</strong> Repeated, unwanted contact, abusive language, or behaviour that causes distress to another user;</li>
+      <li><strong>Hate Speech:</strong> Content that dehumanises individuals or groups based on religion, caste, ethnicity, gender, sexual orientation, disability, or other protected characteristics — including content that violates Indian laws prohibiting promotion of enmity between groups (IPC Section 153A);</li>
+      <li><strong>Discrimination:</strong> Refusing service, making offensive remarks, or treating users differently based on protected characteristics;</li>
+      <li><strong>Impersonation:</strong> Pretending to be another user, public figure, or Gelathi staff member;</li>
+      <li><strong>Body Shaming &amp; Degradation:</strong> Mockery or degrading commentary about a person's physical appearance.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section" id="content">
+    <h2><span class="num">04</span> Content Standards</h2>
+    <h3>4.1 Profile Content</h3>
+    <p>Profile photos and bio information must accurately represent you. Do not use photos of other people, celebrities, or AI-generated images as your profile picture without disclosure.</p>
+    <h3>4.2 Shared Media</h3>
+    <p>Images and videos shared through the Platform must not contain:</p>
+    <ul>
+      <li>Nudity, pornographic, or sexually explicit material;</li>
+      <li>Graphic violence, gore, or disturbing imagery;</li>
+      <li>Content that infringes third-party intellectual property rights;</li>
+      <li>Misleading or manipulated media presented as real (deepfakes).</li>
+    </ul>
+    <h3>4.3 Spam &amp; Scams</h3>
+    <p>Do not send unsolicited promotional messages, chain messages, or phishing links. Do not attempt to defraud other users through fake listings, false promises, or romance scams.</p>
+    <h3>4.4 Misinformation</h3>
+    <p>Do not deliberately spread false information that could cause harm to individuals, communities, or public health.</p>
+  </div>
+
+  <div class="policy-section" id="calls">
+    <h2><span class="num">05</span> Call Etiquette</h2>
+    <p>During audio and video calls on Gelathi, the following rules apply:</p>
+    <ul>
+      <li>Recording calls without the explicit consent of all parties is prohibited and may be illegal under Indian law (IT Act, 2000 and Indian Evidence Act);</li>
+      <li>Do not engage in or solicit sexual activity during calls without mutual explicit consent between adults. Explicit sexual content calls are permitted only in designated adult features (if enabled), subject to age verification;</li>
+      <li>Do not use calls to harass, threaten, or intimidate others;</li>
+      <li>Do not attempt to coerce, manipulate, or pressure Listeners into off-platform interactions, personal meetings, or transactions.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section" id="marketplace">
+    <h2><span class="num">06</span> Marketplace Standards</h2>
+    <p>All Marketplace activity must comply with the following:</p>
+    <ul>
+      <li><strong>Accurate Listings:</strong> Products must be accurately described with genuine photos. Misleading descriptions constitute fraud;</li>
+      <li><strong>Prohibited Items:</strong> Do not list illegal, counterfeit, hazardous, or age-restricted items (tobacco, alcohol, weapons, controlled substances) unless specifically authorised;</li>
+      <li><strong>Honest Reviews:</strong> Reviews must reflect genuine purchase experience. Fake reviews, review trading, or incentivised reviews without disclosure violate these guidelines and the Consumer Protection Act, 2019;</li>
+      <li><strong>Gifting:</strong> Marketplace gifting features must not be used to launder money, make unsolicited contact, or harass other users.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section" id="listeners">
+    <h2><span class="num">07</span> Listener-Specific Guidelines</h2>
+    <p>Verified Listeners are representatives of the Gelathi community and are held to an elevated standard of conduct:</p>
+    <ul>
+      <li>Always be transparent about your Listener status;</li>
+      <li>Do not make false representations about your identity, qualifications, or services offered;</li>
+      <li>Do not solicit tips, gifts, or off-platform payments beyond what the Platform facilitates;</li>
+      <li>Do not share personal contact information (phone number, social media handles, addresses) with callers or encourage them to seek contact outside the Platform;</li>
+      <li>Maintain a respectful and professional demeanour in all interactions;</li>
+      <li>If a user appears to be in distress, encourage them to seek appropriate professional support.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section" id="reporting">
+    <h2><span class="num">08</span> Reporting Violations</h2>
+    <p>We rely on our community to help keep Gelathi safe. If you encounter content or behaviour that violates these guidelines:</p>
+    <ul>
+      <li>Use the <strong>Report</strong> button available on every profile, message, media item, and call interface;</li>
+      <li>For urgent safety concerns, email <strong>safety@gelathi.in</strong> with a description and any supporting evidence;</li>
+      <li>For child safety concerns specifically, you may also report to the National Cyber Crime Reporting Portal at <strong>cybercrime.gov.in</strong>.</li>
+    </ul>
+    <p>Reports are reviewed by our Trust &amp; Safety team. We do not share the identity of the reporter with the reported user.</p>
+  </div>
+
+  <div class="policy-section" id="enforcement">
+    <h2><span class="num">09</span> Enforcement &amp; Consequences</h2>
+    <p>Violations of these Community Guidelines may result in the following actions, depending on severity, frequency, and context:</p>
+    <ul>
+      <li><strong>Warning:</strong> A formal notice for first-time or minor violations;</li>
+      <li><strong>Content Removal:</strong> Offending content taken down without notice;</li>
+      <li><strong>Feature Restriction:</strong> Temporary loss of specific Platform features (e.g., media sharing, calls);</li>
+      <li><strong>Account Suspension:</strong> Temporary inability to access the Platform;</li>
+      <li><strong>Permanent Ban:</strong> Irrevocable removal from the Platform for serious or repeated violations;</li>
+      <li><strong>Legal Action:</strong> Referral to law enforcement authorities for violations of Indian law.</li>
+    </ul>
+    <p>You may appeal enforcement actions by contacting <strong>appeals@gelathi.in</strong> within 14 days of the action. We will review appeals and respond within 10 business days.</p>
+  </div>
+
+  <div class="policy-section" id="contact">
+    <h2><span class="num">10</span> Contact</h2>
+    <p>For questions about these Community Guidelines or to report a serious safety concern:</p>
+    <div class="contact-block">
+      <h3>Trust &amp; Safety — Gelathi</h3>
+      <p>Email: <a href="mailto:safety@gelathi.in">safety@gelathi.in</a></p>
+      <p>Appeals: <a href="mailto:appeals@gelathi.in">appeals@gelathi.in</a></p>
+      <p>Grievance Officer: <a href="mailto:legal@gelathi.in">legal@gelathi.in</a></p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 Gelathi. All rights reserved. &nbsp;·&nbsp;
+  <a href="terms-of-use.html">Terms of Use</a> &nbsp;·&nbsp;
+  <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+  <a href="return-refund-policy.html">Return Policy</a> &nbsp;·&nbsp;
+  <a href="cookie-policy.html">Cookie Policy</a>
+</footer>
+
+</body>
+</html>

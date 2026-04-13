@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Return &amp; Refund Policy — Gelathi</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #1a1a2e;
+  --ink-soft: #3d3d5c;
+  --ink-muted: #7a7a99;
+  --accent: #c8553d;
+  --accent-light: #f5ede9;
+  --bg: #faf9f6;
+  --bg-warm: #f3f1ec;
+  --border: #e0ddd6;
+  --white: #ffffff;
+  --section-gap: 2.5rem;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.doc-header {
+  background: var(--ink);
+  color: var(--white);
+  padding: 3rem 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.doc-header::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.12;
+}
+.doc-header .inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+.doc-header .brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.doc-header .brand::before {
+  content: '';
+  display: inline-block;
+  width: 28px; height: 2px;
+  background: var(--accent);
+}
+.doc-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.doc-header .meta {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
+/* ── Nav bar ── */
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  color: var(--ink-muted);
+  text-decoration: none;
+  padding: 0.9rem 1rem;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+/* ── Main layout ── */
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+/* ── Effective date notice ── */
+.effective-notice {
+  background: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  padding: 0.9rem 1.2rem;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 2.5rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.effective-notice strong { color: var(--accent); }
+
+/* ── Sections ── */
+.policy-section {
+  margin-bottom: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  border-bottom: 1px solid var(--border);
+  animation: fadeUp 0.4s ease both;
+}
+.policy-section:last-child { border-bottom: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.policy-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.policy-section h2 .num {
+  font-size: 0.7rem;
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 0.2em 0.55em;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.policy-section h3 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 1.4rem 0 0.5rem;
+}
+
+.policy-section p {
+  color: var(--ink-soft);
+  margin-bottom: 0.9rem;
+}
+.policy-section p:last-child { margin-bottom: 0; }
+
+.policy-section ul, .policy-section ol {
+  margin: 0.5rem 0 0.9rem 1.4rem;
+  color: var(--ink-soft);
+}
+.policy-section li { margin-bottom: 0.35rem; }
+
+/* ── Highlight box ── */
+.highlight-box {
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  margin: 1rem 0;
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+}
+.highlight-box strong { color: var(--ink); }
+
+/* ── Contact block ── */
+.contact-block {
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 1.8rem 2rem;
+  margin-top: 2rem;
+}
+.contact-block h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.7rem;
+}
+.contact-block p { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 0.3rem; }
+.contact-block a { color: var(--accent); text-decoration: none; }
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border);
+}
+footer a { color: var(--ink-muted); }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  main { padding: 2rem 1.2rem 4rem; }
+  .doc-header .inner { padding: 0 1.2rem; }
+}
+
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1a2e;--ink-soft:#3d3d5c;--ink-muted:#7a7a99;--accent:#c8553d;--accent-light:#f5ede9;--bg:#faf9f6;--bg-warm:#f3f1ec;--border:#e0ddd6;--white:#ffffff;--section-gap:2.5rem}
+html{scroll-behavior:smooth}
+body{font-family:"Source Serif 4",Georgia,serif;font-weight:400;font-size:1.0625rem;line-height:1.8;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+.doc-header{background:var(--ink);color:var(--white);padding:3rem 0 2.5rem;position:relative;overflow:hidden}
+.doc-header::before{content:"";position:absolute;top:-60px;right:-60px;width:320px;height:320px;border-radius:50%;background:var(--accent);opacity:0.12}
+.doc-header .inner{max-width:780px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.doc-header .brand{font-family:"Playfair Display",serif;font-size:0.8rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
+.doc-header .brand::before{content:"";display:inline-block;width:28px;height:2px;background:var(--accent)}
+.doc-header h1{font-family:"Playfair Display",serif;font-size:clamp(2rem,5vw,2.75rem);font-weight:700;line-height:1.2;color:var(--white);margin-bottom:1rem}
+.doc-header .meta{font-size:0.875rem;color:rgba(255,255,255,0.5);font-style:italic}
+main{max-width:780px;margin:0 auto;padding:3rem 2rem 5rem}
+.effective-notice{background:var(--accent-light);border-left:3px solid var(--accent);padding:0.9rem 1.2rem;border-radius:0 6px 6px 0;margin-bottom:2.5rem;font-size:0.9rem;color:var(--ink-soft)}
+.effective-notice strong{color:var(--accent)}
+.policy-section{margin-bottom:var(--section-gap);padding-bottom:var(--section-gap);border-bottom:1px solid var(--border);animation:fadeUp 0.4s ease both}
+.policy-section:last-child{border-bottom:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.policy-section h2{font-family:"Playfair Display",serif;font-size:1.35rem;font-weight:700;color:var(--ink);margin-bottom:1rem;display:flex;align-items:baseline;gap:0.6rem}
+.policy-section h2 .num{font-size:0.7rem;font-family:"Source Serif 4",serif;font-weight:600;letter-spacing:0.1em;color:var(--accent);background:var(--accent-light);padding:0.2em 0.55em;border-radius:3px;flex-shrink:0}
+.policy-section h3{font-family:"Source Serif 4",serif;font-size:1rem;font-weight:600;color:var(--ink);margin:1.4rem 0 0.5rem}
+.policy-section p{color:var(--ink-soft);margin-bottom:0.9rem}
+.policy-section p:last-child{margin-bottom:0}
+.policy-section ul,.policy-section ol{margin:0.5rem 0 0.9rem 1.4rem;color:var(--ink-soft)}
+.policy-section li{margin-bottom:0.35rem}
+.highlight-box{background:var(--bg-warm);border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.4rem;margin:1rem 0;font-size:0.94rem;color:var(--ink-soft)}
+.highlight-box strong{color:var(--ink)}
+.contact-block{background:var(--ink);color:var(--white);border-radius:10px;padding:1.8rem 2rem;margin-top:2rem}
+.contact-block h3{font-family:"Playfair Display",serif;font-size:1.1rem;color:var(--white);margin-bottom:0.7rem}
+.contact-block p{color:rgba(255,255,255,0.65);font-size:0.9rem;margin-bottom:0.3rem}
+.contact-block a{color:var(--accent);text-decoration:none}
+footer{text-align:center;padding:2rem;font-size:0.8rem;color:var(--ink-muted);border-top:1px solid var(--border)}
+footer a{color:var(--ink-muted)}
+</style>
+</head>
+<body>
+
+<header class="doc-header">
+  <div class="inner">
+    <div class="brand">Gelathi</div>
+    <h1>Return &amp; Refund Policy</h1>
+    <p class="meta">Your rights for marketplace orders, Coins, and in-app purchases</p>
+  </div>
+</header>
+
+
+<main>
+  <div class="effective-notice">
+    <strong>Effective Date:</strong> April 13, 2026 &nbsp;·&nbsp; <strong>Last Updated:</strong> April 13, 2026
+  </div>
+
+  <div class="policy-section" id="overview">
+    <h2><span class="num">01</span> Overview</h2>
+    <p>This Return &amp; Refund Policy describes the conditions under which you may return Marketplace products, request refunds on Coin purchases, and seek remedies for interrupted call services on the Gelathi Platform.</p>
+    <p>This policy is formulated in compliance with the Consumer Protection Act, 2019, Consumer Protection (E-Commerce) Rules, 2020, and other applicable Indian consumer laws. Nothing in this policy limits your statutory rights as a consumer under Indian law.</p>
+    <div class="highlight-box">
+      <strong>Summary:</strong> Physical marketplace products may be returned within 7 days of delivery. Coins are non-refundable except in specific circumstances. Call charges are not refundable once a session has commenced.
+    </div>
+  </div>
+
+  <div class="policy-section" id="marketplace">
+    <h2><span class="num">02</span> Marketplace Orders — Returns</h2>
+    <h3>2.1 Eligibility Window</h3>
+    <p>You may request a return for eligible Marketplace products within <strong>7 calendar days</strong> from the date of delivery, provided the item meets the return conditions below.</p>
+    <h3>2.2 Return Conditions</h3>
+    <p>A product is eligible for return if:</p>
+    <ul>
+      <li>It is unused, unwashed, and in its original condition with all tags and packaging intact;</li>
+      <li>It is defective, damaged upon delivery, or materially different from its listed description;</li>
+      <li>The wrong item was delivered.</li>
+    </ul>
+    <h3>2.3 Non-Returnable Items</h3>
+    <p>The following categories are not eligible for return unless defective:</p>
+    <ul>
+      <li>Perishable goods (food, flowers, consumables);</li>
+      <li>Personal hygiene or intimate apparel products once opened;</li>
+      <li>Digital products or downloadable content;</li>
+      <li>Products marked "Final Sale" or "Non-Returnable" at the time of purchase;</li>
+      <li>Customised or personalised items.</li>
+    </ul>
+    <h3>2.4 Evidence Required</h3>
+    <p>For damaged, defective, or wrong-item returns, you must provide clear photographs or a video of the item and its packaging at the time of raising the return request.</p>
+  </div>
+
+  <div class="policy-section" id="coins">
+    <h2><span class="num">03</span> Coins &amp; In-App Purchases</h2>
+    <h3>3.1 General Non-Refundability</h3>
+    <p>Purchases of Gelathi Coins are generally <strong>non-refundable</strong> once the transaction is completed and Coins are credited to your account. This includes Coins that have been partially or fully used.</p>
+    <h3>3.2 Exceptional Refunds</h3>
+    <p>Coin refunds will be considered in the following exceptional circumstances:</p>
+    <ul>
+      <li>Duplicate transaction due to a payment gateway error, evidenced by your bank statement;</li>
+      <li>Coins not credited to your account within 24 hours of a successful payment;</li>
+      <li>Unauthorised transaction on your account, reported within 48 hours of occurrence.</li>
+    </ul>
+    <h3>3.3 Account Closure</h3>
+    <p>Unused Coins at the time of voluntary account deletion are not eligible for refund. If your account is terminated by Gelathi due to our error, unused Coins may be refunded on a case-by-case basis.</p>
+  </div>
+
+  <div class="policy-section" id="calls">
+    <h2><span class="num">04</span> Audio &amp; Video Calls</h2>
+    <p>Coins deducted for voice or video calls are <strong>non-refundable</strong> once the call has commenced, regardless of call quality or duration, as call connectivity is subject to factors including network conditions and device performance that are outside our control.</p>
+    <p>However, if Coins are deducted for a call that failed to connect due to a proven Platform-side error, you may raise a support ticket within 24 hours. Credits (not cash refunds) may be issued at our discretion.</p>
+  </div>
+
+  <div class="policy-section" id="gifted">
+    <h2><span class="num">05</span> Gifted Marketplace Orders</h2>
+    <p>If you purchase a Marketplace product and gift it to another registered user:</p>
+    <ul>
+      <li>The recipient of the gifted order is treated as the buyer for return eligibility purposes;</li>
+      <li>Returns must be initiated by the recipient through their account;</li>
+      <li>Refunds for gifted orders will be credited to the <strong>purchaser's</strong> original payment method;</li>
+      <li>Gifted orders are subject to the same 7-day return window and all standard return conditions.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section" id="process">
+    <h2><span class="num">06</span> How to Initiate a Return</h2>
+    <p>To initiate a return for a Marketplace order:</p>
+    <ol>
+      <li>Go to <strong>My Orders</strong> in the Gelathi app;</li>
+      <li>Select the relevant order and tap <strong>"Return / Report Issue"</strong>;</li>
+      <li>Select the reason for return and upload supporting photos or video if required;</li>
+      <li>Submit your request. You will receive a confirmation and a Return Merchandise Authorisation (RMA) number within 2 business days;</li>
+      <li>Pack the item securely and hand it to our logistics partner as instructed in the confirmation message. Do not send items without an RMA number.</li>
+    </ol>
+    <p>For Coin-related issues or call credits, contact support at <strong>support@gelathi.in</strong> with your transaction ID and a description of the issue.</p>
+  </div>
+
+  <div class="policy-section" id="refunds">
+    <h2><span class="num">07</span> Refund Processing</h2>
+    <h3>7.1 Timeline</h3>
+    <p>Once a return is received and inspected, we will notify you of the outcome within 3 business days. Approved refunds will be processed as follows:</p>
+    <ul>
+      <li><strong>Original payment method (UPI, debit/credit card, net banking):</strong> 5–10 business days;</li>
+      <li><strong>Wallet credits (where applicable):</strong> Within 24 hours of approval;</li>
+      <li><strong>Coin credits:</strong> Within 24 hours of approval.</li>
+    </ul>
+    <h3>7.2 Partial Refunds</h3>
+    <p>Partial refunds may be issued where an item is returned in a condition different from that described, or where only part of a multi-item order is returned.</p>
+    <h3>7.3 Shipping Costs</h3>
+    <p>If the return is due to a defect, damage, or wrong item, return shipping will be arranged and covered by Gelathi. For change-of-mind returns (where applicable), the buyer bears the return shipping cost.</p>
+  </div>
+
+  <div class="policy-section" id="exclusions">
+    <h2><span class="num">08</span> Exclusions &amp; Limitations</h2>
+    <ul>
+      <li>Returns or refunds requested after the applicable window will not be accepted;</li>
+      <li>Items showing signs of use, damage caused by the buyer, or missing original packaging will not be accepted;</li>
+      <li>We reserve the right to decline return requests that we reasonably believe are made in bad faith or constitute abuse of this policy;</li>
+      <li>Promotional or bonus Coins issued free of charge are not eligible for refund.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section" id="consumer">
+    <h2><span class="num">09</span> Statutory Consumer Rights</h2>
+    <p>Nothing in this Return &amp; Refund Policy is intended to, nor shall it, limit or exclude any rights you may have under the Consumer Protection Act, 2019 or other applicable Indian consumer protection legislation. If you believe your statutory rights have been violated, you may also approach:</p>
+    <ul>
+      <li>The National Consumer Helpline: <strong>1800-11-4000</strong>;</li>
+      <li>The National Consumer Disputes Redressal Commission (NCDRC) or relevant State Commission;</li>
+      <li>The consumer e-filing portal at <a href="https://consumerhelpline.gov.in" target="_blank">consumerhelpline.gov.in</a>.</li>
+    </ul>
+  </div>
+
+  <div class="policy-section" id="contact">
+    <h2><span class="num">10</span> Contact &amp; Support</h2>
+    <p>For all return, refund, or order-related queries, please reach out to our support team:</p>
+    <div class="contact-block">
+      <h3>Customer Support — Gelathi</h3>
+      <p>Email: <a href="mailto:support@gelathi.in">support@gelathi.in</a></p>
+      <p>In-app: Help &amp; Support → Raise a Ticket</p>
+      <p>We aim to respond to all queries within 24 hours on business days.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 Gelathi. All rights reserved. &nbsp;·&nbsp;
+  <a href="terms-of-use.html">Terms of Use</a> &nbsp;·&nbsp;
+  <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+  <a href="community-guidelines.html">Community Guidelines</a> &nbsp;·&nbsp;
+  <a href="cookie-policy.html">Cookie Policy</a>
+</footer>
+
+</body>
+</html>

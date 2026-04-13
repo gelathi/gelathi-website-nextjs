@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cookie Policy — Gelathi</title>
+  <style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --ink: #1a1a2e;
+  --ink-soft: #3d3d5c;
+  --ink-muted: #7a7a99;
+  --accent: #c8553d;
+  --accent-light: #f5ede9;
+  --bg: #faf9f6;
+  --bg-warm: #f3f1ec;
+  --border: #e0ddd6;
+  --white: #ffffff;
+  --section-gap: 2.5rem;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Source Serif 4', Georgia, serif;
+  font-weight: 400;
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  color: var(--ink);
+  background: var(--bg);
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── Header ── */
+.doc-header {
+  background: var(--ink);
+  color: var(--white);
+  padding: 3rem 0 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+.doc-header::before {
+  content: '';
+  position: absolute;
+  top: -60px; right: -60px;
+  width: 320px; height: 320px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.12;
+}
+.doc-header .inner {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+.doc-header .brand {
+  font-family: 'Playfair Display', serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 0.75rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.doc-header .brand::before {
+  content: '';
+  display: inline-block;
+  width: 28px; height: 2px;
+  background: var(--accent);
+}
+.doc-header h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.2;
+  color: var(--white);
+  margin-bottom: 1rem;
+}
+.doc-header .meta {
+  font-size: 0.875rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+}
+
+/* ── Nav bar ── */
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 8px rgba(0,0,0,0.06);
+}
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  gap: 0;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  color: var(--ink-muted);
+  text-decoration: none;
+  padding: 0.9rem 1rem;
+  white-space: nowrap;
+  border-bottom: 2px solid transparent;
+  transition: color 0.2s, border-color 0.2s;
+}
+
+/* ── Main layout ── */
+main {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 2rem 5rem;
+}
+
+/* ── Effective date notice ── */
+.effective-notice {
+  background: var(--accent-light);
+  border-left: 3px solid var(--accent);
+  padding: 0.9rem 1.2rem;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 2.5rem;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+.effective-notice strong { color: var(--accent); }
+
+/* ── Sections ── */
+.policy-section {
+  margin-bottom: var(--section-gap);
+  padding-bottom: var(--section-gap);
+  border-bottom: 1px solid var(--border);
+  animation: fadeUp 0.4s ease both;
+}
+.policy-section:last-child { border-bottom: none; }
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.policy-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+.policy-section h2 .num {
+  font-size: 0.7rem;
+  font-family: 'Source Serif 4', serif;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  color: var(--accent);
+  background: var(--accent-light);
+  padding: 0.2em 0.55em;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.policy-section h3 {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 1.4rem 0 0.5rem;
+}
+
+.policy-section p {
+  color: var(--ink-soft);
+  margin-bottom: 0.9rem;
+}
+.policy-section p:last-child { margin-bottom: 0; }
+
+.policy-section ul, .policy-section ol {
+  margin: 0.5rem 0 0.9rem 1.4rem;
+  color: var(--ink-soft);
+}
+.policy-section li { margin-bottom: 0.35rem; }
+
+/* ── Highlight box ── */
+.highlight-box {
+  background: var(--bg-warm);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.2rem 1.4rem;
+  margin: 1rem 0;
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+}
+.highlight-box strong { color: var(--ink); }
+
+/* ── Contact block ── */
+.contact-block {
+  background: var(--ink);
+  color: var(--white);
+  border-radius: 10px;
+  padding: 1.8rem 2rem;
+  margin-top: 2rem;
+}
+.contact-block h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.1rem;
+  color: var(--white);
+  margin-bottom: 0.7rem;
+}
+.contact-block p { color: rgba(255,255,255,0.65); font-size: 0.9rem; margin-bottom: 0.3rem; }
+.contact-block a { color: var(--accent); text-decoration: none; }
+
+/* ── Footer ── */
+footer {
+  text-align: center;
+  padding: 2rem;
+  font-size: 0.8rem;
+  color: var(--ink-muted);
+  border-top: 1px solid var(--border);
+}
+footer a { color: var(--ink-muted); }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  main { padding: 2rem 1.2rem 4rem; }
+  .doc-header .inner { padding: 0 1.2rem; }
+}
+
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--ink:#1a1a2e;--ink-soft:#3d3d5c;--ink-muted:#7a7a99;--accent:#c8553d;--accent-light:#f5ede9;--bg:#faf9f6;--bg-warm:#f3f1ec;--border:#e0ddd6;--white:#ffffff;--section-gap:2.5rem}
+html{scroll-behavior:smooth}
+body{font-family:"Source Serif 4",Georgia,serif;font-weight:400;font-size:1.0625rem;line-height:1.8;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased}
+.doc-header{background:var(--ink);color:var(--white);padding:3rem 0 2.5rem;position:relative;overflow:hidden}
+.doc-header::before{content:"";position:absolute;top:-60px;right:-60px;width:320px;height:320px;border-radius:50%;background:var(--accent);opacity:0.12}
+.doc-header .inner{max-width:780px;margin:0 auto;padding:0 2rem;position:relative;z-index:1}
+.doc-header .brand{font-family:"Playfair Display",serif;font-size:0.8rem;font-weight:600;letter-spacing:0.22em;text-transform:uppercase;color:var(--accent);margin-bottom:0.75rem;display:flex;align-items:center;gap:0.5rem}
+.doc-header .brand::before{content:"";display:inline-block;width:28px;height:2px;background:var(--accent)}
+.doc-header h1{font-family:"Playfair Display",serif;font-size:clamp(2rem,5vw,2.75rem);font-weight:700;line-height:1.2;color:var(--white);margin-bottom:1rem}
+.doc-header .meta{font-size:0.875rem;color:rgba(255,255,255,0.5);font-style:italic}
+main{max-width:780px;margin:0 auto;padding:3rem 2rem 5rem}
+.effective-notice{background:var(--accent-light);border-left:3px solid var(--accent);padding:0.9rem 1.2rem;border-radius:0 6px 6px 0;margin-bottom:2.5rem;font-size:0.9rem;color:var(--ink-soft)}
+.effective-notice strong{color:var(--accent)}
+.policy-section{margin-bottom:var(--section-gap);padding-bottom:var(--section-gap);border-bottom:1px solid var(--border);animation:fadeUp 0.4s ease both}
+.policy-section:last-child{border-bottom:none}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+.policy-section h2{font-family:"Playfair Display",serif;font-size:1.35rem;font-weight:700;color:var(--ink);margin-bottom:1rem;display:flex;align-items:baseline;gap:0.6rem}
+.policy-section h2 .num{font-size:0.7rem;font-family:"Source Serif 4",serif;font-weight:600;letter-spacing:0.1em;color:var(--accent);background:var(--accent-light);padding:0.2em 0.55em;border-radius:3px;flex-shrink:0}
+.policy-section h3{font-family:"Source Serif 4",serif;font-size:1rem;font-weight:600;color:var(--ink);margin:1.4rem 0 0.5rem}
+.policy-section p{color:var(--ink-soft);margin-bottom:0.9rem}
+.policy-section p:last-child{margin-bottom:0}
+.policy-section ul,.policy-section ol{margin:0.5rem 0 0.9rem 1.4rem;color:var(--ink-soft)}
+.policy-section li{margin-bottom:0.35rem}
+.highlight-box{background:var(--bg-warm);border:1px solid var(--border);border-radius:8px;padding:1.2rem 1.4rem;margin:1rem 0;font-size:0.94rem;color:var(--ink-soft)}
+.highlight-box strong{color:var(--ink)}
+.contact-block{background:var(--ink);color:var(--white);border-radius:10px;padding:1.8rem 2rem;margin-top:2rem}
+.contact-block h3{font-family:"Playfair Display",serif;font-size:1.1rem;color:var(--white);margin-bottom:0.7rem}
+.contact-block p{color:rgba(255,255,255,0.65);font-size:0.9rem;margin-bottom:0.3rem}
+.contact-block a{color:var(--accent);text-decoration:none}
+footer{text-align:center;padding:2rem;font-size:0.8rem;color:var(--ink-muted);border-top:1px solid var(--border)}
+footer a{color:var(--ink-muted)}
+</style>
+</head>
+<body>
+
+<header class="doc-header">
+  <div class="inner">
+    <div class="brand">Gelathi</div>
+    <h1>Cookie Policy</h1>
+    <p class="meta">How we use cookies, device identifiers, and similar tracking technologies</p>
+  </div>
+</header>
+
+
+<main>
+  <div class="effective-notice">
+    <strong>Effective Date:</strong> April 13, 2026 &nbsp;·&nbsp; <strong>Last Updated:</strong> April 13, 2026
+  </div>
+
+  <div class="policy-section" id="what">
+    <h2><span class="num">01</span> What Are Cookies &amp; Similar Technologies?</h2>
+    <p>Cookies are small text files placed on your device when you visit a website or use a web-based application. They help the service remember information about your visit, such as your language preferences or login status.</p>
+    <p>In the context of mobile applications like Gelathi, we also use similar technologies such as:</p>
+    <ul>
+      <li><strong>Device Identifiers:</strong> Unique identifiers associated with your mobile device (e.g., Advertising ID on Android/iOS);</li>
+      <li><strong>Local Storage:</strong> Data stored within the app on your device;</li>
+      <li><strong>SDKs (Software Development Kits):</strong> Embedded code from analytics, payment, or communications providers that may collect data;</li>
+      <li><strong>Pixels &amp; Beacons:</strong> Small image files or code used to track interactions on web-based components of our Platform.</li>
+    </ul>
+    <p>In this Cookie Policy, we refer to all of these collectively as "Cookies."</p>
+  </div>
+
+  <div class="policy-section" id="types">
+    <h2><span class="num">02</span> Types of Cookies We Use</h2>
+
+    <h3>2.1 Strictly Necessary Cookies</h3>
+    <p>These Cookies are essential for the Platform to function and cannot be switched off. They include:</p>
+    <ul>
+      <li>Session authentication tokens to keep you logged in;</li>
+      <li>Security tokens to protect against CSRF and other attacks;</li>
+      <li>Preferences you set within the app (e.g., notification settings, display preferences).</li>
+    </ul>
+    <div class="highlight-box">These are always active and do not require your consent, as they are necessary to provide the service you have requested.</div>
+
+    <h3>2.2 Functional Cookies</h3>
+    <p>These Cookies enhance the functionality of the Platform by remembering your choices and providing personalised features:</p>
+    <ul>
+      <li>Remembering your language and region settings;</li>
+      <li>Storing your recent search or browsing history within the app;</li>
+      <li>Saving your call quality preferences.</li>
+    </ul>
+
+    <h3>2.3 Analytics &amp; Performance Cookies</h3>
+    <p>These help us understand how users interact with the Platform so we can improve performance and user experience:</p>
+    <ul>
+      <li>Tracking which features are most used;</li>
+      <li>Identifying crash reports and performance bottlenecks;</li>
+      <li>Aggregate, anonymised usage statistics.</li>
+    </ul>
+    <p>We use third-party analytics tools (such as Firebase Analytics or equivalent) for this purpose. These tools process data in accordance with their own privacy policies.</p>
+
+    <h3>2.4 Marketing &amp; Advertising Cookies</h3>
+    <p>If enabled, these Cookies allow us to show you relevant promotional content within the Platform or on partner platforms. They may track your interactions across sessions to build interest profiles. You may opt out of these at any time (see Section 5).</p>
+  </div>
+
+  <div class="policy-section" id="mobile">
+    <h2><span class="num">03</span> Mobile App &amp; Device Identifiers</h2>
+    <p>As Gelathi is primarily a mobile application, our use of traditional browser cookies is limited. Instead, we rely on the following device-level technologies:</p>
+    <ul>
+      <li><strong>Android Advertising ID (GAID) / iOS Identifier for Advertisers (IDFA):</strong> Used for analytics and, where consented, personalised advertising. You can reset or opt out of ad tracking via your device settings;</li>
+      <li><strong>Firebase Installation IDs:</strong> Used to identify unique app installations for analytics and crash reporting;</li>
+      <li><strong>Push Notification Tokens:</strong> Used to deliver in-app and push notifications. You can disable push notifications in your device settings or app preferences.</li>
+    </ul>
+    <p>We do not use device fingerprinting techniques that combine multiple device attributes to create a persistent identifier without your knowledge.</p>
+  </div>
+
+  <div class="policy-section" id="third-party">
+    <h2><span class="num">04</span> Third-Party SDKs &amp; Services</h2>
+    <p>Gelathi integrates third-party SDKs to provide certain features. These third-party services may place their own Cookies or collect device identifiers independently, subject to their own privacy and cookie policies. Our key third-party integrations include:</p>
+    <ul>
+      <li><strong>Payment Gateways</strong> (e.g., Razorpay or equivalent): For processing Coin purchases and marketplace transactions;</li>
+      <li><strong>Cloud Communications</strong> (e.g., Agora, Twilio, or equivalent): For audio and video call infrastructure;</li>
+      <li><strong>Analytics</strong> (e.g., Firebase): For app performance and usage analytics;</li>
+      <li><strong>Customer Support</strong>: For in-app support chat functionality;</li>
+      <li><strong>Logistics Partners</strong>: For marketplace order tracking.</li>
+    </ul>
+    <p>We encourage you to review the privacy policies of these third-party providers. We will update this list when integrations change materially.</p>
+  </div>
+
+  <div class="policy-section" id="choices">
+    <h2><span class="num">05</span> Your Choices &amp; Controls</h2>
+    <h3>5.1 In-App Preferences</h3>
+    <p>You can manage certain Cookie preferences within the Gelathi app under <strong>Settings → Privacy &amp; Data</strong>. Here you can toggle analytics collection and marketing communications on or off.</p>
+    <h3>5.2 Device-Level Controls</h3>
+    <ul>
+      <li><strong>Android:</strong> Go to Settings → Google → Ads → Reset Advertising ID or opt out of ads personalisation;</li>
+      <li><strong>iOS:</strong> Go to Settings → Privacy → Tracking → Allow Apps to Request to Track (disable for all apps);</li>
+      <li><strong>Push Notifications:</strong> Disable via Settings → Notifications → Gelathi.</li>
+    </ul>
+    <h3>5.3 Effects of Disabling</h3>
+    <p>Disabling Strictly Necessary Cookies or identifiers may prevent the Platform from functioning correctly. Disabling other categories of Cookies will not prevent you from using core features but may affect personalisation and the relevance of recommendations.</p>
+  </div>
+
+  <div class="policy-section" id="india">
+    <h2><span class="num">06</span> India Regulatory Context</h2>
+    <p>India currently does not have a dedicated cookie consent framework equivalent to the EU's GDPR or ePrivacy Directive. However, our Cookie practices are designed to comply with:</p>
+    <ul>
+      <li>The Information Technology Act, 2000 and SPDI Rules, 2011, to the extent that Cookies involve processing of sensitive personal data;</li>
+      <li>The Digital Personal Data Protection Act, 2023 (DPDPA) as and when its provisions and rules are formally notified and come into effect. We will update this policy accordingly;</li>
+      <li>Guidelines from TRAI and MeitY regarding data localisation and transparency.</li>
+    </ul>
+    <p>We are committed to updating our practices in line with evolving Indian data protection law.</p>
+  </div>
+
+  <div class="policy-section" id="changes">
+    <h2><span class="num">07</span> Changes to This Cookie Policy</h2>
+    <p>We may update this Cookie Policy as our technology stack or applicable law changes. When we make material changes, we will notify you through an in-app notice or via your registered email. The "Last Updated" date at the top of this page will always reflect the most recent version.</p>
+  </div>
+
+  <div class="policy-section" id="contact">
+    <h2><span class="num">08</span> Contact Us</h2>
+    <p>For questions about our use of Cookies or to exercise your data rights, please contact:</p>
+    <div class="contact-block">
+      <h3>Privacy Team — Gelathi</h3>
+      <p>Email: <a href="mailto:privacy@gelathi.in">privacy@gelathi.in</a></p>
+      <p>We will respond to your enquiry within 30 days.</p>
+    </div>
+  </div>
+
+</main>
+
+<footer>
+  &copy; 2026 Gelathi. All rights reserved. &nbsp;·&nbsp;
+  <a href="terms-of-use.html">Terms of Use</a> &nbsp;·&nbsp;
+  <a href="privacy-policy.html">Privacy Policy</a> &nbsp;·&nbsp;
+  <a href="return-refund-policy.html">Return Policy</a> &nbsp;·&nbsp;
+  <a href="community-guidelines.html">Community Guidelines</a>
+</footer>
+
+</body>
+</html>
