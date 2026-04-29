@@ -66,7 +66,7 @@ function authorTwitterHandle(post: PostDto): string {
 }
 
 export interface ShareUrlOpts {
-  path: "post" | "product";
+  path: "post" | "marketplace/item";
   id: string;
 }
 
@@ -168,7 +168,7 @@ export function buildProductMetadata(
   const titleCore = product.title;
   const title = `${product.title} · ${SITE_NAME}`;
   const image = pickProductImage(product);
-  const url = shareUrl({ path: "product", id });
+  const url = shareUrl({ path: "marketplace/item", id });
   const cardType: "summary_large_image" | "summary" = image
     ? "summary_large_image"
     : "summary";
@@ -255,7 +255,7 @@ export function buildProductJsonLd(
   id: string,
 ): Record<string, unknown> {
   const product = payload.product;
-  const url = shareUrl({ path: "product", id });
+  const url = shareUrl({ path: "marketplace/item", id });
   const image = pickProductImage(product);
   const inStock = product.stockQuantity > 0 && product.isActive;
   const analytics = payload.analytics;
