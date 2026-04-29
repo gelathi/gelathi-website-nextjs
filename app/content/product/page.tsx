@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { SmartAppRedirect } from "@/components/deeplink/SmartAppRedirect";
-import { fetchPost } from "@/lib/api/server";
+import { fetchProduct } from "@/lib/api/server";
 import {
-  buildPostJsonLd,
-  buildPostMetadata,
+  buildProductJsonLd,
+  buildProductMetadata,
   defaultShareMetadata,
   jsonLdScript,
   shareUrl,
@@ -21,28 +21,30 @@ export async function generateMetadata({
   const { id } = await searchParams;
   if (!id) return defaultShareMetadata();
 
-  const canonical = shareUrl({ path: "post", id });
-  const post = await fetchPost(id);
-  if (!post || post.status !== "ACTIVE") {
+  const canonical = shareUrl({ path: "product", id });
+  const payload = await fetchProduct(id);
+  if (!payload || !payload.product?.isActive) {
     return defaultShareMetadata(canonical);
   }
-  return buildPostMetadata(post, id);
+  return buildProductMetadata(payload, id);
 }
 
-export default async function SharedPostPage({
+export default async function SharedProductPage({
   searchParams,
 }: {
   searchParams: Promise<PageSearchParams>;
 }) {
   const { id } = await searchParams;
 
-  const params: Record<string, string> = { type: "post" };
+  const params: Record<string, string> = { type: "marketplace_item" };
   if (id) params.id = id;
   const payload = new URLSearchParams(params).toString();
 
-  const post = id ? await fetchPost(id) : null;
+  const product = id ? await fetchProduct(id) : null;
   const jsonLd =
-    post && post.status === "ACTIVE" ? buildPostJsonLd(post, id!) : null;
+    product && product.product.isActive
+      ? buildProductJsonLd(product, id!)
+      : null;
 
   return (
     <>
@@ -52,7 +54,7 @@ export default async function SharedPostPage({
           dangerouslySetInnerHTML={{ __html: jsonLdScript(jsonLd) }}
         />
       ) : null}
-      <SmartAppRedirect payload={payload} shareKind="post" />
+      <SmartAppRedirect payload={payload} shareKind="marketplace_item" />
     </>
   );
 }

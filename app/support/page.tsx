@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { GrievanceForm } from "@/app/support/GrievanceForm";
 
 export const metadata: Metadata = {
-  title: "Support & Grievances · Gelathi",
+  title: "Support & Grievances",
   description:
     "Submit a grievance to the Gelathi team. We review every submission and respond by email.",
   robots: { index: true, follow: true },
