@@ -5,7 +5,7 @@
 export const SITE_URL = "https://gelathi.in";
 export const SITE_NAME = "Gelathi";
 export const SITE_DESCRIPTION =
-  "Gelathi — listen, share, and connect with the people who matter.";
+  "Pick up a call. Send a note. Shop something you love. Gelathi is the one app for meaningful conversations with verified experts, trained listeners, and a curated community marketplace.";
 
 export const TWITTER_USERNAME = "gelathi_app";
 export const TWITTER_HANDLE = `@${TWITTER_USERNAME}`;

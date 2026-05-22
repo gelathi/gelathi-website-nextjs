@@ -1,9 +1,21 @@
+import { HeroSection } from "@/components/home/HeroSection";
+import { FeaturesSection } from "@/components/home/FeaturesSection";
+import { MarketplaceSection } from "@/components/home/MarketplaceSection";
+import { TrustPrivacySection } from "@/components/home/TrustPrivacySection";
+import { CommunitySection } from "@/components/home/CommunitySection";
+import { CTASection } from "@/components/home/CTASection";
+import { Footer } from "@/components/home/Footer";
+
 export default function Home() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <p>This page is under construction! - Please Come back Later</p>
-      </main>
-    </div>
+    <>
+      <HeroSection />
+      <FeaturesSection />
+      <MarketplaceSection />
+      <TrustPrivacySection />
+      <CommunitySection />
+      <CTASection />
+      <Footer />
+    </>
   );
 }
