@@ -1,12 +1,9 @@
 "use client";
 
-import { useEffect, useSyncExternalStore } from "react";
+import { useEffect, useState, useSyncExternalStore } from "react";
 import { AppOpenLanding } from "@/components/deeplink/AppOpenLanding";
 import type { ShareKind } from "@/components/deeplink/types";
-import {
-  getIosAppStoreUrl,
-  PLAY_STORE_DETAILS_URL,
-} from "@/lib/deeplink/constants";
+import { PLAY_STORE_DETAILS_URL } from "@/lib/deeplink/constants";
 import { getDeviceClass } from "@/lib/deeplink/device";
 import { logger } from "@/lib/logger";
 
@@ -28,18 +25,20 @@ function RedirectShell() {
     <div
       className="min-h-screen bg-[#faf8f5] dark:bg-zinc-950"
       aria-busy="true"
-      aria-label="Redirecting to app store"
+      aria-label="Redirecting to Google Play"
     />
   );
 }
 
-function IosStoreRedirect({
+function IosAppRedirect({
   payload,
   shareKind,
 }: {
   payload: string;
   shareKind: ShareKind;
 }) {
+  const [showLanding, setShowLanding] = useState(false);
+
   useEffect(() => {
     // Copy payload to clipboard so the app can read it after a fresh install (deferred deep link).
     navigator.clipboard.writeText(payload).then(
@@ -56,16 +55,19 @@ function IosStoreRedirect({
     window.location.href = `gelathi://?${payload}`;
 
     // If the app opened, the page becomes hidden (backgrounded by iOS).
-    // Only redirect to the App Store if the page is still visible after the delay.
+    // Otherwise show the landing page with a Google Play download link.
     const timer = setTimeout(() => {
       if (document.hidden) return;
-      const target = getIosAppStoreUrl();
-      logger.info("deeplink_redirect_ios", { shareKind, target });
-      window.location.href = target;
+      logger.info("deeplink_show_landing_ios", { shareKind });
+      setShowLanding(true);
     }, 2000);
 
     return () => clearTimeout(timer);
   }, [payload, shareKind]);
+
+  if (showLanding) {
+    return <AppOpenLanding kind={shareKind} />;
+  }
 
   return <RedirectShell />;
 }
@@ -98,8 +100,8 @@ function AndroidStoreRedirect({
 }
 
 /**
- * Deferred deep link entry: on iOS/Android we only redirect to the store (with context).
- * Desktop shows a lightweight “open in app” page — no in-browser content for the shared entity.
+ * Deferred deep link entry: on Android we redirect to Google Play (with context).
+ * iOS and desktop show a lightweight “open in app” page with a Google Play link.
  */
 export function SmartAppRedirect({ payload, shareKind }: SmartAppRedirectProps) {
   const isClient = useSyncExternalStore(
@@ -115,7 +117,7 @@ export function SmartAppRedirect({ payload, shareKind }: SmartAppRedirectProps) 
   const device = getDeviceClass();
 
   if (device === "ios") {
-    return <IosStoreRedirect payload={payload} shareKind={shareKind} />;
+    return <IosAppRedirect payload={payload} shareKind={shareKind} />;
   }
 
   if (device === "android") {

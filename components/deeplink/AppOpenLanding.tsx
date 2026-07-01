@@ -1,8 +1,5 @@
+import { GooglePlayButton } from "@/components/home/GooglePlayButton";
 import type { ShareKind } from "@/components/deeplink/types";
-import {
-  getIosAppStoreUrl,
-  PLAY_STORE_DETAILS_URL,
-} from "@/lib/deeplink/constants";
 
 function copyForKind(kind: ShareKind): { headline: string; body: string } {
   switch (kind) {
@@ -31,7 +28,6 @@ function copyForKind(kind: ShareKind): { headline: string; body: string } {
 
 export function AppOpenLanding({ kind }: { kind: ShareKind }) {
   const { headline, body } = copyForKind(kind);
-  const appStoreUrl = getIosAppStoreUrl();
 
   return (
     <div className="relative min-h-screen overflow-hidden bg-[#faf8f5] text-zinc-900 dark:bg-zinc-950 dark:text-zinc-100">
@@ -55,21 +51,8 @@ export function AppOpenLanding({ kind }: { kind: ShareKind }) {
           {body}
         </p>
 
-        <div className="mt-10 flex w-full max-w-sm flex-col gap-3 sm:flex-row sm:justify-center">
-          <a
-            href={appStoreUrl}
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-xl bg-zinc-900 px-5 py-3 text-sm font-medium text-white shadow-lg transition hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-200"
-          >
-            App Store
-          </a>
-          <a
-            href={PLAY_STORE_DETAILS_URL}
-            rel="noopener noreferrer"
-            className="inline-flex items-center justify-center rounded-xl border border-zinc-300 bg-white/80 px-5 py-3 text-sm font-medium text-zinc-900 backdrop-blur-sm transition hover:bg-white dark:border-zinc-600 dark:bg-zinc-900/80 dark:text-zinc-100 dark:hover:bg-zinc-900"
-          >
-            Google Play
-          </a>
+        <div className="mt-10 flex w-full max-w-sm justify-center">
+          <GooglePlayButton variant="landing" />
         </div>
 
         {/* Placeholder region for a future static QR asset or generated QR */}
