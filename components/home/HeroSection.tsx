@@ -1,4 +1,3 @@
-import { DunsSeal } from "@/components/home/DunsSeal";
 import { GooglePlayButton } from "@/components/home/GooglePlayButton";
 
 export function HeroSection() {
@@ -45,7 +44,6 @@ export function HeroSection() {
 
           <div className="mt-10 flex flex-col items-center gap-6">
             <GooglePlayButton variant="hero" />
-            <DunsSeal className="flex justify-center" />
           </div>
 
           {/* App screenshots strip — subtle preview */}
