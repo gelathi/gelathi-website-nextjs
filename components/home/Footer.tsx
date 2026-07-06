@@ -129,6 +129,14 @@ export function Footer() {
               </li>
               <li>
                 <a
+                  href="/child-safety-standards.html"
+                  className="transition hover:text-violet-400"
+                >
+                  Child Safety Standards
+                </a>
+              </li>
+              <li>
+                <a
                   href="/return-refund-policy.html"
                   className="transition hover:text-violet-400"
                 >
